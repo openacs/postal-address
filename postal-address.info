@@ -13,63 +13,14 @@
         <database>postgresql</database>
     </database-support>
         <owner url="mailto:jon@mayuli.com">Jon Griffin</owner>
-        <summary>This is an implementation of HR-XML's address standard.</summary>
-        <vendor url="http://www.mayuli.com">Mayuli Enterprises LLC</vendor>
-        <description format="text/html">This is an implementation of HR-XML's address standard.&lt;p&gt;
-Originally part of Contacts-Lite, it is now a service.</description>
+        <summary>An implementation of HR-XML's address standard.</summary>
+        <vendor url="http://www.mayuli.com">Mayuli Enterprises, LLC</vendor>
+        <description format="text/html">This is an implementation of HR-XML's address standard.&lt;p&gt;Originally part of Contacts-Lite, now a service.</description>
 
         <requires url="acs-kernel" version="4.6"/>
         <requires url="acs-reference" version="0.2d"/>
         <requires url="ref-countries" version="0.1d"/>
 
-        <files>
-            <file type="package_spec" path="postal-address.info"/>
-            <file path="sql/oracle/oracle.notes"/>
-            <file type="data_model_create" db_type="postgresql" path="sql/postgresql/postal-address-create.sql"/>
-            <file type="data_model" db_type="postgresql" path="sql/postgresql/postal-address-plsql.sql"/>
-            <file type="query_file" db_type="oracle" path="www/add-edit-oracle.xql"/>
-            <file type="query_file" db_type="postgresql" path="www/add-edit-postgresql.xql"/>
-            <file type="content_page" path="www/add-edit.adp"/>
-            <file type="content_page" path="www/add-edit.tcl"/>
-            <file type="query_file" path="www/add-edit.xql"/>
-            <file type="query_file" db_type="oracle" path="www/address-delete-2-oracle.xql"/>
-            <file type="query_file" db_type="postgresql" path="www/address-delete-2-postgresql.xql"/>
-            <file type="content_page" path="www/address-delete-2.tcl"/>
-            <file type="query_file" path="www/address-delete-2.xql"/>
-            <file type="content_page" path="www/address-delete.adp"/>
-            <file type="content_page" path="www/address-delete.tcl"/>
-            <file type="query_file" path="www/address-delete.xql"/>
-            <file type="content_page" path="www/admin/address-type/add-edit.adp"/>
-            <file type="content_page" path="www/admin/address-type/add-edit.tcl"/>
-            <file type="query_file" path="www/admin/address-type/add-edit.xql"/>
-            <file type="content_page" path="www/admin/address-type/delete-2.tcl"/>
-            <file type="content_page" path="www/admin/address-type/delete.adp"/>
-            <file type="content_page" path="www/admin/address-type/delete.tcl"/>
-            <file type="query_file" path="www/admin/address-type/delete.xql"/>
-            <file type="content_page" path="www/admin/address-type/index.adp"/>
-            <file type="content_page" path="www/admin/address-type/index.tcl"/>
-            <file type="query_file" path="www/admin/address-type/index.xql"/>
-            <file type="content_page" path="www/admin/index.adp"/>
-            <file type="content_page" path="www/admin/index.tcl"/>
-            <file type="query_file" db_type="oracle" path="www/delete-2-oracle.xql"/>
-            <file type="query_file" db_type="postgresql" path="www/delete-2-postgresql.xql"/>
-            <file type="content_page" path="www/delete-2.tcl"/>
-            <file type="query_file" path="www/delete-2.xql"/>
-            <file type="content_page" path="www/delete.adp"/>
-            <file type="content_page" path="www/delete.tcl"/>
-            <file type="query_file" path="www/delete.xql"/>
-            <file type="query_file" db_type="oracle" path="www/index-oracle.xql"/>
-            <file type="query_file" db_type="postgresql" path="www/index-postgresql.xql"/>
-            <file type="content_page" path="www/index.adp"/>
-            <file type="content_page" path="www/index.tcl"/>
-            <file type="query_file" path="www/index.xql"/>
-            <file type="content_page" path="www/notes.txt"/>
-            <file type="query_file" db_type="oracle" path="www/one-oracle.xql"/>
-            <file type="query_file" db_type="postgresql" path="www/one-postgresql.xql"/>
-            <file type="content_page" path="www/one.adp"/>
-            <file type="content_page" path="www/one.tcl"/>
-            <file type="query_file" path="www/one.xql"/>
-        </files>
         <parameters>
         <!-- No version parameters -->
         </parameters>

@@ -35,8 +35,7 @@ create table postal_addresses
                         constraint postal_owner_id_fk
                             references parties (party_id),
     delivery_address    varchar (1000)
-                        constraint postal_address_delivery_nn
-                        not null,
+                        constraint postal_address_delivery_nn,
     postal_code         varchar (30),
     municipality        varchar (100),
     region              varchar (100),

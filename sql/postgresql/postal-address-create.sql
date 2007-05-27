@@ -34,17 +34,13 @@ create table postal_addresses
     party_id            integer
                         constraint postal_owner_id_fk
                             references parties (party_id),
-    delivery_address    varchar (1000)
-                        constraint postal_address_delivery_nn
-                        not null,
+    delivery_address    varchar (1000),
     postal_code         varchar (30),
     municipality        varchar (100),
     region              varchar (100),
     country_code        char    (2)
                         constraint postal_addresses_country_fk
-                            references countries (iso)
-                        constraint postal_addresses_country_nn
-                            not null,
+                            references countries (iso),
     additional_text     varchar(100),
     postal_type         integer
                         constraint postal_addresses_type_fk

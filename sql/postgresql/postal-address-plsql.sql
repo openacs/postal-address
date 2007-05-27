@@ -30,8 +30,9 @@ select inline_0 ();
 drop function inline_0 ();
 
 ------ start of oacs new proc
-create or replace function postal_address__new ( varchar,integer,char,varchar,varchar,
-integer,varchar,integer,varchar,integer,varchar,integer )
+select define_function_args('postal_address__new','additional_text,address_id,country_code,delivery_address,municipality,party_id,postal_code,postal_type,region,creation_user,creation_ip,context_id');
+
+create or replace function postal_address__new ( varchar,integer,char,varchar,varchar,integer,varchar,integer,varchar,integer,varchar,integer )
 returns integer as ' 
 declare 
     p_additional_text     alias for $1; -- comment
@@ -51,7 +52,7 @@ declare
     v_address_id postal_addresses.address_id%TYPE; 
 begin 
   v_address_id := acs_object__new (  
-    null,  
+    p_address_id,  
     ''postal_address'',
     now(), 
     p_creation_user, 

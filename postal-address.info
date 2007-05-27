@@ -7,22 +7,25 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>f</singleton-p>
 
-    <version name="0.1d" url="http://openacs.org/repository/download/apm/postal-address-0.1d.apm">
+    <version name="0.3d1" url="http://openacs.org/repository/download/apm/postal-address-0.3d1.apm">
     <database-support>
         <database>oracle</database>
         <database>postgresql</database>
     </database-support>
-        <owner url="mailto:jon@mayuli.com">Jon Griffin</owner>
+        <owner url="mailto:malte.sussdorff@cognovis.de">Malte Sussdorff</owner>
         <summary>An implementation of HR-XML's address standard.</summary>
-        <vendor url="http://www.mayuli.com">Mayuli Enterprises, LLC</vendor>
         <description format="text/html">This is an implementation of HR-XML's address standard.&lt;p&gt;Originally part of Contacts-Lite, now a service.</description>
 
-        <requires url="acs-kernel" version="4.6"/>
+	<provides url="postal-address" version="0.3d1"/>
+        <requires url="acs-kernel" version="5.3"/>
         <requires url="acs-reference" version="0.2d"/>
-        <requires url="ref-countries" version="0.1d"/>
+        <requires url="ref-countries" version="1.1"/>
 
         <parameters>
-        <!-- No version parameters -->
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="DefaultAdressLayoutP"  default="1" description="Especify the default template for input and display layout for the address. Set to 1 for { street, city, state, zip, country } or 0 for { street, zip, city, state, country }"/>
+            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="DefaultISOCountryCode"  description="Specify the default ISO Country Code(s) to be used for all address widgets. The first country that will show up is the first entry in this list. The countries specified here will be be at the top of the country list seperated from all other country codes. If left blank it will default to whatever country is alphabetically first in the language used. For a complete list of codes look at the countries table in the database."/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="DefaultStreetLines"  default="3" description="Maximum number of lines of text the street address may have"/>
+            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="DefaultStreetSize"  default="100" description="Maximum number of characters the street address might have"/>
         </parameters>
 
     </version>
